@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/salvadorbba/ibscbs-client.git"
+    }
+  ],
+  "require": {
+    "developer-api/ibscbs-client": "dev-main"
+  }
+}
