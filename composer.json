@@ -1,0 +1,20 @@
+{
+  "name": "developer-api/ibscbs-client",
+  "description": "Cliente PHP para a API IBS/CBS (developerapi.com.br)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ruebns dos Santos",
+      "email": "salvadorbba@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DeveloperApi\\IbsCbs\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0"
+  }
+}
