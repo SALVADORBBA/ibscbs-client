@@ -1,4 +1,4 @@
-# developer-api/ibscbs-client
+# composer require developer-api/ibscbs-client
 
 Cliente PHP para a API de cálculo de IBS/CBS.
 
@@ -32,7 +32,7 @@ Se o pacote ainda não estiver no Packagist, adicione o repositório Git no `com
 Em seguida, instale:
 
 ```bash
-composer require developer-api/ibscbs-client:dev-main
+composer require developer-api/ibscbs-client
 ```
 
 ## Uso
@@ -199,7 +199,7 @@ curl_close($curl);
 
 ## Autor
 
-- Nome: Ruebns dos Santos
+- Nome: Rubens dos Santos
 - E-mail: salvadorbba@gmail.com
 
 ## Licença
