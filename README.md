@@ -199,8 +199,8 @@ curl_close($curl);
 
 ## Autor
 
-- Nome: Ruebns dos Santos
-- E-mail: salvadorbba@gmail.com
+- Nome: Rubens dos Santos
+- E-mail: salvadorbba@gmail.com  
 
 ## Licença
 
