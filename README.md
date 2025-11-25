@@ -32,7 +32,7 @@ Se o pacote ainda não estiver no Packagist, adicione o repositório Git no `com
 Em seguida, instale:
 
 ```bash
-composer require developer-api/ibscbs-client:dev-main
+composer require developer-api/ibscbs-client
 ```
 
 ## Uso
