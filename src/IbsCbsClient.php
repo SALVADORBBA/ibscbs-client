@@ -17,7 +17,7 @@ class IbsCbsClient
      */
     public function __construct(?string $endpoint = null)
     {
-        $this->endpoint = $endpoint ?? 'https://impostos.developerapi.com.br/public/api/ibscbs/json';
+        $this->endpoint = $endpoint ?? 'https://modelotributacao.developerapi.com.br/ibscbs/json';
     }
 
     /**
