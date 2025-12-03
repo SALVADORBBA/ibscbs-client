@@ -78,50 +78,7 @@ try {
     echo 'Erro na API IBS/CBS: ' . $e->getMessage();
 }
 ```
-
-### 2) Endpoint customizado
-
-```php
-<?php
-require __DIR__ . '/vendor/autoload.php';
-
-use DeveloperApi\IbsCbs\IbsCbsClient;
-
-$client = new IbsCbsClient('https://modelotributacao.developerapi.com.br/ibscbs/json');
-
-$nota = [
-    'data_emissao'   => '2025-11-26',
-    'numero'         => '987',
-    'serie'          => '1',
-    'cnpj_emitente'  => '12345678000199',
-    'cnpj_cliente'   => '99887766000155',
-    'valor_total'    => 48.90,
-];
-
-$items = [
-    [
-        'codigo'            => '001',
-        'descricao'         => 'Produto X',
-        'ncm'               => '22030000',
-        'cfop'              => '5102',
-        'quantidade'        => 1,
-        'valor_unitario'    => 48.90,
-        'valor_total'       => 48.90,
-        'ibs_classificacao' => '000001',
-        'ibs_cst'           => '000',
-    ],
-];
-
-try {
-    $resultado = $client->calcular($nota, $items, 'MT', 'MT');
-    echo '<pre>';
-    print_r($resultado);
-    echo '</pre>';
-} catch (\Throwable $e) {
-    echo 'Erro na API IBS/CBS (endpoint customizado): ' . $e->getMessage();
-}
-```
-
+ 
 ## Payload
 
 Formato enviado pelo método `calcular()`:
