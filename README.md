@@ -2,7 +2,7 @@
 
 Cliente PHP para a API de cálculo de IBS/CBS.
 
-- Endpoint padrão: `https://impostos.developerapi.com.br/public/api/ibscbs/json`
+- Endpoint padrão: `https://modelotributacao.developerapi.com.br/ibscbs/json`
 - Classe principal: `DeveloperApi\IbsCbs\IbsCbsClient`
 
 ## Requisitos
