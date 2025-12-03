@@ -82,12 +82,12 @@ require __DIR__ . '/vendor/autoload.php';
 
 use DeveloperApi\IbsCbs\IbsCbsClient;
 
-$client = new IbsCbsClient('https://impostos.developerapi.com.br/public/api/ibscbs/json');
+$client = new IbsCbsClient('https://modelotributacao.developerapi.com.br/public/api/ibscbs/json');
 
 $nota = [
     'data_emissao' => '2025-07-15',
 ];
-
+ 
 $items = [
     [
         'vprod'             => 48.90,
@@ -169,7 +169,7 @@ Chamada direta sem usar o client:
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    CURLOPT_URL            => 'https://impostos.developerapi.com.br/public/api/ibscbs/json',
+    CURLOPT_URL            => 'https://modelotributacao.developerapi.com.br/public/api/ibscbs/json',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING       => '',
     CURLOPT_MAXREDIRS      => 10,
