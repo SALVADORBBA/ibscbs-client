@@ -1,6 +1,5 @@
-# composer require developer-api/ibscbs-client
 
-Cliente PHP para a API de cálculo de IBS/CBS.
+# Biblioteca PHP para cálculo simples e automático de IBS/CBS nas novas regras da Reforma Tributária (NF-e / NFC-e)
 
 - Endpoint padrão: `https://modelotributacao.developerapi.com.br/ibscbs/json`
 - Classe principal: `DeveloperApi\IbsCbs\IbsCbsClient`
