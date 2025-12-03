@@ -91,3 +91,39 @@ class IbsCbsClient
         return $decoded;
     }
 }
+
+
+     
+    //   IBS/CBS: cálculo por item (estrutura JSON similar ao XML <IBSCBS>)
+    //   Quando for ativar IBS/CBS neste script, descomente o bloco abaixo
+    //   e garanta que a classe IbsCbsConfigService esteja carregada.
+     
+    //   Exemplo de uso real:
+     
+      $nota_stub = (object)[
+          'data_emissao' => $getSale['date'] ?? date('Y-m-d'),
+      ];
+     
+      $ufEmitente = $empresa['uf'] ?? 'BA';
+      $ufCliente  = $getCustomer['state'] ?? $ufEmitente;
+     
+      $ibsResultado = IbsCbsConfigService::montarIbscbsJson(
+          $nota_stub,
+          (object)[
+              'ibs_classificacao'    => $item['ibs_classificacao']    ?? '000001',
+              'ibs_cst'              => $item['ibs_cst']              ?? '000',
+              'vbc_ibs'              => $subtotal,
+              'vprod'                => $subtotal,
+              'ibs_indicador_doacao' => $item['ibs_indicador_doacao'] ?? null,
+          ],
+          $ufEmitente,
+          $ufCliente,
+          $index + 1,
+          $ibsTotais
+      );
+     
+     // Estrutura pronta para envio para API (quando a API suportar IBS/CBS)
+      $dados['produtos'][$index]['IBSCBS']    = $ibsResultado['ibs_cbs'];
+      $dados['produtos'][$index]['infAdProd'] =
+          trim(($dados['produtos'][$index]['infAdProd'] ?? '') . ' ' . $ibsResultado['infAdProd']);
+    
